@@ -40,7 +40,7 @@ training_set <- subset(dataset, split == TRUE)
 test_set <- subset(dataset, split == FALSE)
 
 # Feature Scaling
-# It is necessary to scale the training_set and the test_set, becuase if we 
+# It is necessary to scale the training_set and the test_set, becuase if we look
 # at the Euclidian distances between any two points (age, salary), the square
 # of the difference of salary dominates over the square of the difference in
 # age. Only scaling the age and salary columns
