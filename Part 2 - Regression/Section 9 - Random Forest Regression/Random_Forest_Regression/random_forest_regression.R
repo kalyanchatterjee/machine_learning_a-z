@@ -1,5 +1,7 @@
 # Random Forest Regression
 
+setwd("~/Desktop/machine_learning_a-z/Part 2 - Regression/Section 9 - Random Forest Regression/Random_Forest_Regression")
+
 # Importing the dataset
 dataset = read.csv('Position_Salaries.csv')
 dataset = dataset[2:3]

@@ -1,5 +1,7 @@
 # Decision Tree Regression
 
+setwd("~/Desktop/machine_learning_a-z/Part 2 - Regression/Section 8 - Decision Tree Regression/Decision_Tree_Regression")
+
 # Importing the dataset
 dataset = read.csv('Position_Salaries.csv')
 dataset = dataset[2:3]
@@ -10,6 +12,9 @@ library(rpart)
 regressor = rpart(formula = Salary ~ .,
                   data = dataset,
                   control = rpart.control(minsplit = 1))
+
+# The control argument is essential as without it, rpart will just plot a constant
+# horizontal line to predict Y.
 
 # Predicting a new result with Decision Tree Regression
 y_pred = predict(regressor, data.frame(Level = 6.5))

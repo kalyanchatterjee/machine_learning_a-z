@@ -1,5 +1,6 @@
 # Simple Linear Regression
 
+setwd("~/Desktop/machine_learning_a-z/Part 2 - Regression/Section 4 - Simple Linear Regression")
 # Importing the dataset
 dataset = read.csv('Salary_Data.csv')
 
@@ -17,7 +18,7 @@ test_set = subset(dataset, split == FALSE)
 
 # Fitting Simple Linear Regression to the Training Set
 regressor = lm(formula = Salary ~ YearsExperience,
-               training_set)
+               data = training_set)
 y_pred = predict(regressor, newdata = test_set)
 
 # Visualize

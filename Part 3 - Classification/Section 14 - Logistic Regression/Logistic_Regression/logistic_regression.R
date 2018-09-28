@@ -1,5 +1,7 @@
 # Logistic Regression
 
+setwd("~/Desktop/machine_learning_a-z/Part 3 - Classification/Section 14 - Logistic Regression/Logistic_Regression")
+
 # Importing the dataset
 dataset <- read.csv('Social_Network_Ads.csv')
 dataset <- dataset[3:5]

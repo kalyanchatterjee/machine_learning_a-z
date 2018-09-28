@@ -1,5 +1,6 @@
 # Multiple Linear Regression
 
+setwd("~/Desktop/machine_learning_a-z/Part 2 - Regression/Section 5 - Multiple Linear Regression")
 # Importing the dataset
 dataset = read.csv('50_Startups.csv')
 
@@ -9,7 +10,7 @@ dataset$State = factor(dataset$State,
                        labels = c(1, 2, 3))
 
 # Splitting the dataset into the Training set and Test set
-install.packages('caTools')
+# install.packages('caTools')
 library(caTools)
 set.seed(123)
 split = sample.split(dataset$Profit, SplitRatio = 0.8)
@@ -29,7 +30,8 @@ regressor = lm(formula = Profit ~ .,
 y_pred = predict(regressor, newdata = test_set)
 
 # Building the optimal model using Backward Elimination
-# Note we are taking the entire dataset and NOT the training set
+# Note we are taking the entire dataset and NOT the training set => simply to increase
+# accuracy of the model.
 regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State,
                data = dataset)
 
